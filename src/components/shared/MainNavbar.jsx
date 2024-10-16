@@ -12,7 +12,7 @@ const MainNavbar = () => {
         { name: 'Cypher AI', path: '/cypher-ai' },
     ];
     return (
-        <div className='bg-background py-5'>
+        <div className='bg-background'>
             <div className="container flex justify-between items-center text-custom">
                 <img src="/public/logo.png" alt="" className='w-28 xs:w-32' />
 
@@ -55,7 +55,7 @@ const MainNavbar = () => {
                 </div>
             </div>
 
-            <div className={`absolute top-0 ${isMobile ? 'left-0' : '-left-full'} transition-all duration-500 w-full h-screen bg-black/80 p-5`}>
+            <div className={`absolute top-0 ${isMobile ? 'left-0' : '-left-full'} transition-all duration-500 w-full h-screen bg-black/80 p-5 z-20`}>
                 <nav className='flex flex-col space-y-5 text-sm  relative'>
                     {navItems.map((item) => (
                         <div key={item.name} className="relative w-fit">
