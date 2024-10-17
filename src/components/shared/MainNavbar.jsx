@@ -14,7 +14,7 @@ const MainNavbar = () => {
     return (
         <div className='bg-background'>
             <div className="container flex justify-between items-center text-custom">
-                <img src="/public/logo.png" alt="" className='w-28 xs:w-32' />
+                <img src="/logo.png" alt="" className='w-28 xs:w-32' />
 
 
                 <nav className='lg:flex space-x-8 text-sm hidden relative'>
@@ -36,12 +36,12 @@ const MainNavbar = () => {
 
                 <div className='flex space-x-2 xs:space-x-5 items-center'>
                     <div className='flex justify-center items-center bg-white w-10 h-10 rounded-full relative'>
-                        <img src="/public/bell.png" alt="" />
+                        <img src="/bell.png" alt="" />
                         <p className='absolute top-0 right-0 h-2.5 w-2.5 bg-[#4ADE80] rounded-full'></p>
                     </div>
 
                     <div className='flex space-x-2 items-center'>
-                        <img src="/public/profilePic.png" alt="" />
+                        <img src="/profilePic.png" alt="" />
                         <div className='flex flex-col'>
                             <p className='text-base font-semibold'>Usman Zafar</p>
                             <p className='text-sm'>usmanzafar@gmail.com</p>
