@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { IconPlus, IconSearch } from '../Icons';
 
 const SecondaryNavbar = () => {
-    const [currentPath, setCurrentPath] = useState('/');
+    const [currentPath, setCurrentPath] = useState('/dashboard');
     const location = useLocation();
     let renderedContent;
     useEffect(() => {
@@ -15,7 +15,7 @@ const SecondaryNavbar = () => {
             <div className='flex flex-col items-center sm:items-start space-y-2'>
                 {renderedContent}
                 <p className='text-secondary text-xs'>
-                    {currentPath === '/'
+                    {currentPath === '/dashboard'
                         ?
                         'Welcome back'
                         :
@@ -23,7 +23,7 @@ const SecondaryNavbar = () => {
                     }
                 </p>
                 <h2 className='text-2xl font-bold'>
-                    {currentPath === '/'
+                    {currentPath === '/dashboard'
                         ?
                         'Dashboard'
                         :
@@ -40,9 +40,9 @@ const SecondaryNavbar = () => {
                 <button className="bg-white border-[#FAFAFA] rounded-md py-3 px-3 xs:px-7">Sort By: Date modified</button>
 
                 {
-                    currentPath === '/' ?
+                    currentPath === '/dashboard' ?
                         <button className="primary-button">Cypher AI</button> :
-                        <button className="primary-button flex items-center space-x-2"> <IconPlus size={16} />  <span>New Incident</span> </button>
+                        <button className="primary-button flex items-center space-x-2"> <IconPlus size={16} />  <Link to={'incidents/step1'}>New Incident</Link> </button>
                 }
             </div>
 

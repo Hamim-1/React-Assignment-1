@@ -3,8 +3,12 @@ import { NavLink, useLocation } from 'react-router-dom';
 const MainNavbar = () => {
     const location = useLocation();
     const [isMobile, setIsmobile] = useState(false);
+    const isActivePath = (itemPath) => {
+        return location.pathname === itemPath || location.pathname.startsWith(itemPath);
+    };
+
     const navItems = [
-        { name: 'Dashboard', path: '/' },
+        { name: 'Dashboard', path: '/dashboard' },
         { name: 'Incidents', path: '/incidents' },
         { name: 'Locations', path: '/locations' },
         { name: 'Activities', path: '/activities' },
@@ -23,13 +27,13 @@ const MainNavbar = () => {
                             <NavLink
                                 to={item.path}
                                 className={({ isActive }) =>
-                                    isActive ? 'font-bold text-black' : 'text-secondary'
+                                    isActive || isActivePath(item.path) ? 'font-bold text-black' : 'text-secondary'
                                 }
                             >
                                 {item.name}
                             </NavLink>
                             {/* Conditional Underline */}
-                            <p className={`absolute left-0 -bottom-[35px] w-full h-1 ${item.path === window.location.pathname ? 'bg-black' : 'bg-transparent'} transition-all duration-300`} />
+                            <p className={`absolute left-0 -bottom-[35px] w-full h-1 ${window.location.pathname.startsWith(item.path) ? 'bg-black' : 'bg-transparent'} transition-all duration-300`} />
                         </div>
                     ))}
                 </nav>

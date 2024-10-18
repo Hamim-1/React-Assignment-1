@@ -16,11 +16,11 @@ const Navbar = () => {
             <MainNavbar />
 
             {
-                currentPath === '/' || currentPath === '/incidents'
+                currentPath === '/dashboard' || currentPath === '/incidents'
                     ?
                     <SecondaryNavbar />
-                    :
-                    <IncidentNavbar />
+                    : currentPath.startsWith('/incidents') &&
+                    < IncidentNavbar />
             }
         </div>
     );

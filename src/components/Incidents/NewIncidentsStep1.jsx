@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Incidents = () => {
+const NewIncidentsStep1 = () => {
     const steps = [
         { heading: 'What type of incident?', datails: 'Choose the category that best describes the incident.' },
         { heading: 'Tell us about the incident?', datails: 'Let’s connect the dots and see where to start.' },
@@ -36,9 +36,9 @@ const Incidents = () => {
                 </div>
             </div>
 
-            <button className='primary-button w-fit mx-auto'> <Link to='/newIncidents-step-1'>Get started</Link> </button>
+            <button className='primary-button w-fit mx-auto'> <Link to='/incidents/step2'>Get started</Link> </button>
         </div>
     );
 };
 
-export default Incidents;
+export default NewIncidentsStep1;
