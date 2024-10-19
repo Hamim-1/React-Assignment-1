@@ -11,17 +11,15 @@ const IncidentNavbar = () => {
 
     }, [location.pathname])
     return (
-        <div className='container flex flex-col sm:flex-row space-y-5 sm:space-y-0 justify-between items-center'>
+        <div className='container flex flex-col xs:flex-row space-y-10 xs:space-y-0 justify-between items-center relative'>
 
-            <div className='flex space-x-5 items-center'>
+            <div className='flex w-full xs:w-fit flex-row-reverse xs:flex-row justify-between xs:justify-start  space-x-5 items-center'>
 
-
-
-                <div className='flex justify-center items-center bg-white size-10 rounded-full'>
+                <div className='flex justify-center items-center bg-white size-10 rounded-full cursor-pointer'>
                     <IconX size={20} color='gray' />
                 </div>
 
-                <div className='flex flex-col items-center sm:items-start space-y-2'>
+                <div className='flex flex-col sm:items-start space-y-2'>
                     <p className='text-secondary text-xs'>
                         Home - Incidents - New Incident
                     </p>
@@ -31,8 +29,14 @@ const IncidentNavbar = () => {
                 </div>
             </div>
 
-            <div className='flex space-x-2 sm:space-x-5 text-xs text-secondary'>
-                <button className="bg-white border-[#FAFAFA] rounded-md py-3 px-3 xs:px-7">Back</button>
+            <div className='w-4/5 lg:w-[527px] h-1 bg-[#E5E7EB] rounded-md absolute left-1/2 -translate-x-1/2 top-8 xs:-top-5 lg:top-1/2 lg:-translate-y-1/2'>
+                <div className='w-1/5 h-1 bg-primary rounded-md'>
+
+                </div>
+            </div>
+
+            <div className='flex space-x-5 text-xs text-secondary'>
+                <button className="bg-white border-[#FAFAFA] rounded-md py-3 px-7">Back</button>
 
                 <button className="primary-button">Next step</button>
             </div>

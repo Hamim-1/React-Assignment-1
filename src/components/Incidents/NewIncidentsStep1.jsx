@@ -10,7 +10,7 @@ const NewIncidentsStep1 = () => {
     return (
         <div className='w-full lg:max-w-[820px] flex flex-col space-y-8 mx-auto px-2 lg:px-0 my-8 justify-center items-center'>
             <h2 className='text-3xl font-bold'>Let’s get started</h2>
-            <p className='text-base text-secondary'>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum <br /> dolar sit general sac mascho werhoLorem ipsum dolar sit gene</p>
+            <p className='text-base text-secondary text-center'>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum <br className='hidden xs:block' /> dolar sit general sac mascho werhoLorem ipsum dolar sit gene</p>
 
             <div className='flex xs:flex-col space-x-7 xs:space-x-0 xs:space-y-10'>
                 <div className='h-[585px] w-1 xs:w-[530px] lg:w-[610px] relative xs:h-1 bg-background mx-auto mt-[130px]'>
@@ -36,7 +36,9 @@ const NewIncidentsStep1 = () => {
                 </div>
             </div>
 
-            <button className='primary-button w-fit mx-auto'> <Link to='/incidents/step2'>Get started</Link> </button>
+            <Link to='/incidents/step2'>
+                <button className='primary-button w-fit mx-auto'>Get started</button>
+            </Link>
         </div>
     );
 };

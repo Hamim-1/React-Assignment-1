@@ -14,7 +14,7 @@ const Dashboard = () => {
         { heading: "Tulare County", place: "Tulare County,  Los Angles, CA 23415", price: '1,456,654.00', img: "/Incident6.png" },
     ]
     return (
-        <div className='container grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 xl:relative'>
+        <div className='container grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 mt-10 xl:relative'>
             {
                 incedents.map((incedent, i) => {
                     return <IncidentCard incedent={incedent} key={i} />

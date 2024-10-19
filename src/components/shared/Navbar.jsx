@@ -19,8 +19,11 @@ const Navbar = () => {
                 currentPath === '/dashboard' || currentPath === '/incidents'
                     ?
                     <SecondaryNavbar />
-                    : currentPath.startsWith('/incidents') &&
-                    < IncidentNavbar />
+                    : currentPath === '/incidents/step1'
+                        ? console.log()
+
+                        : currentPath.startsWith('/incidents') &&
+                        < IncidentNavbar />
             }
         </div>
     );

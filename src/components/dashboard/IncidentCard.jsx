@@ -4,7 +4,7 @@ const IncidentCard = ({ incedent }) => {
     const { heading, place, price, img } = incedent;
     return (
         <div className='w-4/5 xs:max-w-[300px] flex flex-col space-y-3 relative mx-auto'>
-            <img src={img} alt="" className='w-full' />
+            <img src={img} alt="" className='w-full cursor-pointer hover:scale-110 transition-transform' />
             <h2 className='text-base font-bold'>{heading}</h2>
             <p className='text-sm text-secondary'>{place}</p>
             <p className='text-base font-bold'>${price}</p>

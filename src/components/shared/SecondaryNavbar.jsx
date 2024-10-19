@@ -32,17 +32,23 @@ const SecondaryNavbar = () => {
                 </h2>
             </div>
 
-            <div className='flex space-x-2 sm:space-x-5 text-xs text-secondary'>
+            <div className='flex flex-col xs:flex-row space-y-5 xs:space-y-0 xs:space-x-5 text-xs text-secondary'>
+
                 <button className="flex items-center space-x-2 bg-white border-[#FAFAFA] rounded-md py-3 px-3 xs:px-7">
                     <IconSearch size={16} />
                     <span>Search incident</span>
                 </button>
+
                 <button className="bg-white border-[#FAFAFA] rounded-md py-3 px-3 xs:px-7">Sort By: Date modified</button>
 
                 {
                     currentPath === '/dashboard' ?
+
                         <button className="primary-button">Cypher AI</button> :
-                        <button className="primary-button flex items-center space-x-2"> <IconPlus size={16} />  <Link to={'incidents/step1'}>New Incident</Link> </button>
+
+                        <Link to={'incidents/step1'}>
+                            <button className="primary-button flex items-center space-x-2"> <IconPlus size={16} />  <span>New Incident</span> </button>
+                        </Link>
                 }
             </div>
 

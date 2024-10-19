@@ -15,8 +15,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/incidents" element={<Dashboard />} />
         <Route path="incidents/step1" element={<NewIncidentsStep1 />} />
-
         <Route path="incidents/step2" element={<NewIncidentStep2 />} />
+        <Route path="incidents/step3" element={<NewIncidentStep3 />} />
       </Routes>
     </BrowserRouter>
   )

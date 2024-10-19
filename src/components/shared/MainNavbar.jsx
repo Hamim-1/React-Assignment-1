@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 const MainNavbar = () => {
     const location = useLocation();
@@ -6,6 +6,21 @@ const MainNavbar = () => {
     const isActivePath = (itemPath) => {
         return location.pathname === itemPath || location.pathname.startsWith(itemPath);
     };
+    useEffect(() => {
+        if (isMobile) {
+            document.body.style.overflow = 'hidden';
+
+        } else {
+            document.body.style.overflow = '';
+
+        }
+    }, [isMobile])
+
+    useEffect(() => {
+        if (isMobile) {
+            setIsmobile(false);
+        }
+    }, [location.pathname])
 
     const navItems = [
         { name: 'Dashboard', path: '/dashboard' },
@@ -44,7 +59,7 @@ const MainNavbar = () => {
                         <p className='absolute top-0 right-0 h-2.5 w-2.5 bg-[#4ADE80] rounded-full'></p>
                     </div>
 
-                    <div className='flex space-x-2 items-center'>
+                    <div className='hidden xs:flex space-x-2 items-center'>
                         <img src="/profilePic.png" alt="" />
                         <div className='flex flex-col'>
                             <p className='text-base font-semibold'>Usman Zafar</p>
@@ -61,6 +76,16 @@ const MainNavbar = () => {
 
             <div className={`absolute top-0 ${isMobile ? 'left-0' : '-left-full'} transition-all duration-500 w-full h-screen bg-black/80 p-5 z-20`}>
                 <nav className='flex flex-col space-y-5 text-sm  relative'>
+
+                    <div className='xs:hidden flex space-x-2 items-center text-white'>
+                        <img src="/profilePic.png" alt="" />
+                        <div className='flex flex-col'>
+                            <p className='text-base font-semibold'>Usman Zafar</p>
+                            <p className='text-sm'>usmanzafar@gmail.com</p>
+                        </div>
+                    </div>
+
+
                     {navItems.map((item) => (
                         <div key={item.name} className="relative w-fit">
                             <NavLink
@@ -72,7 +97,8 @@ const MainNavbar = () => {
                                 {item.name}
                             </NavLink>
                             {/* Conditional Underline */}
-                            <p className={`absolute left-0 -bottom-1 w-full h-1 ${item.path === window.location.pathname ? 'bg-primary' : 'bg-transparent'} transition-all duration-300`} />
+                            <p className={`absolute left-0 -bottom-1 w-full h-1 ${window.location.pathname.startsWith(item.path) ? 'bg-primary' : 'bg-transparent'} transition-all duration-300`} />
+
                         </div>
                     ))}
                 </nav>
