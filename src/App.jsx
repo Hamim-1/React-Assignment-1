@@ -3,6 +3,7 @@ import Navbar from "./components/shared/Navbar"
 import Dashboard from "./components/dashboard/Dashboard"
 import NewIncidentsStep1 from "./components/Incidents/NewIncidentsStep1"
 import NewIncidentStep2 from './components/Incidents/NewIncidentStep2';
+import NewIncidentStep3 from './components/Incidents/NewIncidentStep3';
 
 
 function App() {
