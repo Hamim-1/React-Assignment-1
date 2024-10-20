@@ -1,11 +1,12 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import Navbar from "./components/shared/Navbar"
-import Dashboard from "./components/dashboard/Dashboard"
+
 import NewIncidentsStep1 from "./components/Incidents/NewIncidentsStep1"
 import NewIncidentStep2 from './components/Incidents/NewIncidentStep2';
 import NewIncidentStep3 from './components/Incidents/NewIncidentStep3';
 import NewIncidentStep4 from './components/Incidents/NewIncidentStep4';
 import Locations from './components/locations/Locations';
+import Dashboard from './components/dashboard/Dashboard.jsx';
 
 
 function App() {
