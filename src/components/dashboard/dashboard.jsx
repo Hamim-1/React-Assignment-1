@@ -17,11 +17,11 @@ const Dashboard = () => {
         <div className='container grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 mt-10 xl:relative'>
             {
                 incedents.map((incedent, i) => {
-                    return <IncidentCard incedent={incedent} key={i} />
+                    return <IncidentCard incedent={incedent} type={'incident'} key={i} />
                 })
             }
             {
-                location.pathname === '/' && <Chatbot />
+                location.pathname === '/dashboard' && <Chatbot />
             }
         </div>
 

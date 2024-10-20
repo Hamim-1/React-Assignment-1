@@ -16,7 +16,7 @@ const Navbar = () => {
             <MainNavbar />
 
             {
-                currentPath === '/dashboard' || currentPath === '/incidents'
+                (currentPath === '/dashboard' || currentPath === '/incidents') || currentPath === '/locations'
                     ?
                     <SecondaryNavbar />
                     : currentPath === '/incidents/step1'

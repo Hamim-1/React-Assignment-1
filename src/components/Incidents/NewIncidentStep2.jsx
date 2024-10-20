@@ -28,14 +28,14 @@ const NewIncidentStep2 = () => {
     ];
 
     return (
-        <div className='max-w-[755px] mx-auto px-2'>
+        <div className='max-w-[770px] mx-auto px-2'>
 
             <h2 className='text-2xl font-bold my-10 text-center'>Which of these best describes the incident?</h2>
             <div className='flex flex-wrap justify-center items-center gap-[10px]'>
 
                 {
                     icons.map(({ Icon, label, type }, i) => {
-                        return <div onClick={() => setSelectedType(i)} className={`w-[180px] h-[70px] border border-[#E4E4E7] rounded-md flex space-x-3 p-5 cursor-pointer ${i === selectedType ? 'bg-primary text-white transition-colors' : 'bg-background text-secondary'}`} key={i}>
+                        return <div onClick={() => setSelectedType(i)} className={`w-[180px] h-[70px] hover:scale-110 hover:bg-primary hover:text-white transition-all duration-300 border border-[#E4E4E7] rounded-md flex items-center space-x-3 p-5 cursor-pointer ${i === selectedType ? 'bg-primary text-white transition-colors' : 'bg-background text-secondary'}`} key={i}>
                             <div>
                                 {
                                     type === 'fa' ?

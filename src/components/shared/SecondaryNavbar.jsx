@@ -18,16 +18,18 @@ const SecondaryNavbar = () => {
                     {currentPath === '/dashboard'
                         ?
                         'Welcome back'
-                        :
-                        'Home - Incidents'
+                        : currentPath === '/locations' ?
+                            'Incidents - DR-4699 March 2023 Severe Storms' :
+                            'Home - Incidents'
                     }
                 </p>
                 <h2 className='text-2xl font-bold'>
                     {currentPath === '/dashboard'
                         ?
                         'Dashboard'
-                        :
-                        'Incidents'
+                        : currentPath === '/locations' ?
+                            <div className='flex items-start xs:items-center space-x-2'> <img src="/tree-icon.png" alt="" /> <span className='text-center text-lg lg:text-2xl'>DR-4699 March 2023 Severe Storms</span></div> :
+                            'Incidents'
                     }
                 </h2>
             </div>
@@ -45,10 +47,17 @@ const SecondaryNavbar = () => {
                     currentPath === '/dashboard' ?
 
                         <button className="primary-button">Cypher AI</button> :
+                        currentPath === '/locations' ?
 
-                        <Link to={'incidents/step1'}>
-                            <button className="primary-button flex items-center space-x-2"> <IconPlus size={16} />  <span>New Incident</span> </button>
-                        </Link>
+                            <button className="primary-button flex items-center space-x-2"> <IconPlus size={16} />
+                                <span>New Location</span>
+                            </button> :
+
+                            <Link to={'incidents/step1'}>
+                                <button className="primary-button flex items-center space-x-2"> <IconPlus size={16} />
+                                    <span>New Incident</span>
+                                </button>
+                            </Link>
                 }
             </div>
 
