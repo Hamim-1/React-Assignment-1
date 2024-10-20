@@ -3,7 +3,7 @@ import IncidentCard from './IncidentCard';
 import Chatbot from './Chatbot';
 import { useLocation } from 'react-router-dom';
 
-const Dashboard = () => {
+const Home = () => {
     const location = useLocation();
     const incedents = [
         { heading: "Whitechapel Rd.", place: "Whitechapel Rd.", price: '1,456,654.00', img: "/Incident1.png" },
@@ -28,4 +28,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default Home;
